@@ -28,9 +28,6 @@ class BookList extends Component {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicCheckbox"></Form.Group>
-          <Button variant="primary" type="submit">
-            Cerca libro
-          </Button>
         </Form>
         <Row className="justify-content-center">
           {!this.state.searchString ? (
