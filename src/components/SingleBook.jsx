@@ -18,7 +18,7 @@ class SingleBook extends Component {
     const clicked = this.state.selected ? "clicked" : "";
 
     return (
-      <Col sm={12} md={4} xl={2} className="mt-3">
+      <Col sm={12} md={4} xl={2} key={this.props.asin} className="mt-3">
         <Card className="text-center" onClick={this.clickedBook} id={clicked}>
           <Card.Img id="img" variant="top" src={this.props.cover} />
           <Card.Body>

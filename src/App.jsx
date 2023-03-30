@@ -11,20 +11,20 @@ import romanceBooks from "./books/romance.json";
 import scifiBooks from "./books/scifi.json";
 import BookList from "./components/BookList";
 
-const books = [...fantasyBooks, ...historyBooks, ...horrorBooks, ...romanceBooks, ...scifiBooks];
+const libri = [...fantasyBooks, ...historyBooks, ...horrorBooks, ...romanceBooks, ...scifiBooks];
 
-books.sort(() => Math.random() - 0.5);
-const selectedBooks = books.slice(0, 30);
+const books = libri.sort(() => Math.random() - 0.5);
 
 function App() {
   return (
     <>
       <MyNav />
       <MyHero />
-      <BookList selectedBooks={selectedBooks} />
+      <BookList selectedBooks={books} />
       <MyFooter />
     </>
   );
 }
 
 export default App;
+export { books };
